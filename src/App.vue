@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
@@ -8,14 +8,13 @@ import HelloWorld from './components/HelloWorld.vue'
     <router-link to="/demoElTable" class="mr-10px">DemoElTable</router-link>
     <router-link to="/slot" class="mr-10px">Slot</router-link>
     <router-link to="/named-slots" class="mr-10px">Named Slots</router-link>
-
   </div>
   <HelloWorld msg="Vite + Vue" />
   <router-view></router-view>
 </template>
 
 <style scoped>
-.mr-10px{
+.mr-10px {
   margin-right: 10px;
 }
 </style>
