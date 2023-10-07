@@ -4,13 +4,17 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
-    <router-link class="m-5" to="/">Main </router-link>
-    <router-link to="/demoElTable">DemoElTable</router-link>
+    <router-link to="/" class="mr-10px">Main</router-link>
+    <router-link to="/demoElTable" class="mr-10px">DemoElTable</router-link>
+    <router-link to="/slot" class="mr-10px">Slot</router-link>
+
   </div>
   <HelloWorld msg="Vite + Vue" />
   <router-view></router-view>
 </template>
 
 <style scoped>
-
+.mr-10px{
+  margin-right: 10px;
+}
 </style>

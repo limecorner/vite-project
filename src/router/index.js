@@ -9,6 +9,11 @@ const routes = [
     path:'/demoElTable',
     name: 'DemoElTable',
     component: () => import('@/views/DemoElTable.vue'),
+  },
+  {
+    path:'/slot',
+    name: 'Slot',
+    component: () => import('@/views/Slot.vue'),
   }
 ]
 const router = createRouter({
