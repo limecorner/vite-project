@@ -8,7 +8,14 @@
       <slot name="interest">興趣</slot>
     </h5>
     <strong>
-      <slot name="jobTitle">職稱</slot>
+      <slot name="cost" :discount="discount" :specialDiscount="specialDiscount"
+        >午餐花費</slot
+      >
     </strong>
   </div>
 </template>
+
+<script setup>
+const discount = 0.9;
+const specialDiscount = 0.1;
+</script>

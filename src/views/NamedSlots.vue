@@ -5,12 +5,17 @@
     <template v-slot:name>James Lian</template>
     <!-- 先選定好 slot (名稱為 interest 的 slot)，再插入內容-->
     <template v-slot:interest>Read</template>
-    <template v-slot:jobTitle>Cloud</template>
+    <template v-slot:cost="slotProps"
+      >原價: 100; 小同安打折後{{ 100 * slotProps.discount }}</template
+    >
   </ComplexCard>
   <ComplexCard class="purple">
     <template v-slot:name>{{ wade.name }}</template>
     <template v-slot:interest>{{ wade.interest }}</template>
-    <template v-slot:jobTitle>{{ wade.jobTitle }}</template>
+    <template #cost="{ discount, specialDiscount }"
+      >原價: {{ wade.cost }}; 錢都打折後{{ wade.cost * discount }};
+      錢都特別打折後{{ wade.cost * specialDiscount }}</template
+    >
   </ComplexCard>
 </template>
 
@@ -21,6 +26,7 @@ const wade = reactive({
   name: "Wade Lee",
   interest: "Game",
   jobTitle: "Android",
+  cost: 200,
 });
 </script>
 <style scoped>

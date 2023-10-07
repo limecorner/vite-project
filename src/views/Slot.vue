@@ -4,8 +4,9 @@
   <Card class="text-red">父元件寫入的字</Card>
   <ComplexCard class="blue">
     <template v-slot:name>Alan Liu</template>
-    <template v-slot:interest>Run</template>
-    <template v-slot:jobTitle>Data</template>
+    <template v-slot:cost="{ discount }"
+      >原價: 90; 雞肉飯打折後{{ 90 * discount }}</template
+    >
   </ComplexCard>
 </template>
 
