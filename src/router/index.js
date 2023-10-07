@@ -14,6 +14,11 @@ const routes = [
     path:'/slot',
     name: 'Slot',
     component: () => import('@/views/Slot.vue'),
+  },
+  {
+    path:'/named-slots',
+    name: 'NamedSlots',
+    component: () => import('@/views/NamedSlots.vue'),
   }
 ]
 const router = createRouter({
