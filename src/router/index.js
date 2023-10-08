@@ -6,9 +6,9 @@ const routes = [
     component: () => import("@/views/Main.vue"),
   },
   {
-    path: "/demoElTable",
-    name: "DemoElTable",
-    component: () => import("@/views/DemoElTable.vue"),
+    path: "/elTable",
+    name: "elTable",
+    component: () => import("@/views/ElTable.vue"),
   },
   {
     path: "/slot",
