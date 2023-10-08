@@ -11,6 +11,7 @@ import HelloWorld from "./components/HelloWorld.vue";
     <router-link to="/defineProperty" class="mr-10px"
       >DefineProperty</router-link
     >
+    <router-link to="/reactivity" class="mr-10px">Reactivity</router-link>
   </div>
   <HelloWorld msg="Vite + Vue" />
   <router-view></router-view>

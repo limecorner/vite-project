@@ -20,11 +20,15 @@ const routes = [
     name: "NamedSlots",
     component: () => import("@/views/NamedSlots.vue"),
   },
-  ,
   {
     path: "/defineProperty",
     name: "DefineProperty",
     component: () => import("@/views/DefineProperty.vue"),
+  },
+  {
+    path: "/reactivity",
+    name: "Reactivity",
+    component: () => import("@/views/Reactivity.vue"),
   },
 ];
 const router = createRouter({
