@@ -20,6 +20,12 @@ const routes = [
     name: "NamedSlots",
     component: () => import("@/views/NamedSlots.vue"),
   },
+  ,
+  {
+    path: "/defineProperty",
+    name: "DefineProperty",
+    component: () => import("@/views/DefineProperty.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
