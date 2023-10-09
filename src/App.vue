@@ -1,4 +1,5 @@
 <template>
+  <LanguageOptions />
   <div>
     <router-link
       v-for="{ to, heading } in routerArray"
@@ -13,6 +14,8 @@
 
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
+import LanguageOptions from "./components/LanguageOptions.vue";
+
 const routerArray = [
   {
     to: "/",

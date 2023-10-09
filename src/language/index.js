@@ -3,7 +3,7 @@ import en from "./en.json";
 import cn from "./zh-cn.json";
 import tw from "./zh-tw.json";
 
-let defalutLanguage = localStorage.getItem("lang") || "en";
+let defalutLanguage = localStorage.getItem("language") || "tw";
 
 const i18n = createI18n({
   legacy: false,
