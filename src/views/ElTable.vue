@@ -1,5 +1,5 @@
 <template>
-  <el-button @click="handleCurrentChange(1)">查電影</el-button>
+  <el-button @click="handleCurrentChange(1)">{{ t("searchMovies") }}</el-button>
   <el-button @click="logFinalCheckedMovies">目前勾選的電影</el-button>
   <el-button
     @click="exportDataToExcel"
@@ -36,12 +36,14 @@ import { ref, nextTick, watch } from "vue";
 import axios from "axios";
 import { ElTable } from "element-plus";
 import { utils, writeFile } from "xlsx";
+import { useI18n } from "vue-i18n";
 
 const BASE_URL = "https://api.themoviedb.org/3/";
 const isLoading = ref(false);
 const movieArray = ref<any[]>([]);
 const currentPage = ref(1);
 const pageCount = ref(0);
+const { t } = useI18n();
 
 // 查詢電影
 const filterMovies = async (page) => {
