@@ -1,3 +1,7 @@
 {
-  "searchMovies":"查電影"
+  "searchMovies":"查電影",
+
+  "title":"名稱",
+  "popularity":"受歡迎度",
+  "releaseDate":"發行日期"
 }

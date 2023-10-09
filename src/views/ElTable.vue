@@ -16,9 +16,13 @@
   >
     <el-table-column type="selection" width="55" />
     <el-table-column type="index" width="50" />
-    <el-table-column prop="original_title" label="title" width="180" />
-    <el-table-column prop="popularity" label="popularity" width="180" />
-    <el-table-column prop="release_date" label="release_date" width="180" />
+    <el-table-column prop="original_title" :label="t('title')" width="180" />
+    <el-table-column prop="popularity" :label="t('popularity')" width="180" />
+    <el-table-column
+      prop="release_date"
+      :label="t('releaseDate')"
+      width="180"
+    />
   </el-table>
   <el-pagination
     @current-change="handleCurrentChange"
@@ -146,12 +150,9 @@ const exportDataToExcel = async () => {
   ];
   // 展示的名稱
   const headerDisplay = {
-    // original_title: t("original_title"),
-    // popularity: t("popularity"),
-    // release_date: t("release_date"),
-    original_title: "original_title",
-    popularity: "popularity",
-    release_date: "release_date",
+    original_title: t("title"),
+    popularity: t("popularity"),
+    release_date: t("releaseDate"),
   };
 
   let dataWithNewHeader: any[] = [];

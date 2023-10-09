@@ -1,3 +1,7 @@
 {
-  "searchMovies":"search movies"
+  "searchMovies":"search movies",
+
+  "title":"title",
+  "popularity":"popularity",
+  "releaseDate":"release date"
 }
