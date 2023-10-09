@@ -1,6 +1,11 @@
 <template>
   <el-button @click="handleCurrentChange(1)">查電影</el-button>
   <el-button @click="logFinalCheckedMovies">目前勾選的電影</el-button>
+  <el-button
+    @click="exportDataToExcel"
+    :disabled="finalCheckedMovies.length === 0"
+    >匯出勾選的電影</el-button
+  >
 
   <el-table
     :data="movieArray"
@@ -30,6 +35,7 @@
 import { ref, nextTick, watch } from "vue";
 import axios from "axios";
 import { ElTable } from "element-plus";
+import { utils, writeFile } from "xlsx";
 
 const BASE_URL = "https://api.themoviedb.org/3/";
 const isLoading = ref(false);
@@ -126,5 +132,51 @@ const logFinalCheckedMovies = () => {
   finalCheckedMovies.value.forEach(({ original_title }) => {
     console.log(original_title);
   });
+};
+
+// 將勾選到的電影，匯出成 excel 檔
+const exportDataToExcel = async () => {
+  // 展示的順序
+  const header = [
+    "original_title", // index: 0
+    "popularity",
+    "release_date", // index: 2
+  ];
+  // 展示的名稱
+  const headerDisplay = {
+    // original_title: t("original_title"),
+    // popularity: t("popularity"),
+    // release_date: t("release_date"),
+    original_title: "original_title",
+    popularity: "popularity",
+    release_date: "release_date",
+  };
+
+  let dataWithNewHeader: any[] = [];
+  dataWithNewHeader = [headerDisplay, ...finalCheckedMovies.value];
+
+  // 創建工作表
+  const ws = utils.json_to_sheet(dataWithNewHeader, {
+    header: header,
+    skipHeader: true, // 忽略原來的表頭
+  });
+
+  // 隱藏不展示的欄位
+  const startIndex = Object.keys(headerDisplay).length;
+  const totalProperties = header.length;
+  ws["!cols"] = [];
+  for (let index = startIndex; index < totalProperties; index++) {
+    ws["!cols"][index] = { hidden: true };
+  }
+
+  // 創建工作簿
+  const wb = utils.book_new();
+  // 將工作表放入工作簿中
+  utils.book_append_sheet(wb, ws, "data");
+  // 生成文件並下载
+  writeFile(wb, "匯出的電影.xlsx");
+
+  finalCheckedMovies.value = [];
+  tableRef.value?.clearSelection();
 };
 </script>
