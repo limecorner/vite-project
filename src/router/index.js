@@ -30,6 +30,11 @@ const routes = [
     name: "Reactivity",
     component: () => import("@/views/Reactivity.vue"),
   },
+  {
+    path: "/props",
+    name: "props",
+    component: () => import("@/views/Props.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

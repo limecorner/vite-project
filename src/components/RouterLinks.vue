@@ -35,6 +35,10 @@ const routerArray = [
     to: "reactivity",
     heading: "Reactivity",
   },
+  {
+    to: "props",
+    heading: "Props",
+  },
 ];
 </script>
 
