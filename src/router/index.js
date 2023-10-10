@@ -35,6 +35,11 @@ const routes = [
     name: "props",
     component: () => import("@/views/Props.vue"),
   },
+  {
+    path: "/dynamicComponents",
+    name: "dynamicComponents",
+    component: () => import("@/views/DynamicComponents.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

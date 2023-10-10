@@ -39,6 +39,10 @@ const routerArray = [
     to: "props",
     heading: "Props",
   },
+  {
+    to: "dynamicComponents",
+    heading: "Dynamic Components",
+  },
 ];
 </script>
 
