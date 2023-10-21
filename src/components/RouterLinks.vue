@@ -43,6 +43,10 @@ const routerArray = [
     to: "dynamicComponents",
     heading: "Dynamic Components",
   },
+  {
+    to: "nextTick",
+    heading: "nextTick",
+  },
 ];
 </script>
 

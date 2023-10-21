@@ -40,6 +40,11 @@ const routes = [
     name: "dynamicComponents",
     component: () => import("@/views/DynamicComponents.vue"),
   },
+  {
+    path: "/nextTick",
+    name: "nextTick",
+    component: () => import("@/views/NextTick.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
