@@ -47,6 +47,10 @@ const routerArray = [
     to: "nextTick",
     heading: "nextTick",
   },
+  {
+    to: "import",
+    heading: "import",
+  },
 ];
 </script>
 

@@ -45,6 +45,11 @@ const routes = [
     name: "nextTick",
     component: () => import("@/views/NextTick.vue"),
   },
+  {
+    path: "/import",
+    name: "import",
+    component: () => import("@/views/Import.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
