@@ -16,13 +16,9 @@
   >
     <el-table-column type="selection" width="55" />
     <el-table-column type="index" width="50" />
-    <el-table-column prop="original_title" :label="t('title')" width="180" />
-    <el-table-column prop="popularity" :label="t('popularity')" width="180" />
-    <el-table-column
-      prop="release_date"
-      :label="t('releaseDate')"
-      width="180"
-    />
+    <el-table-column prop="original_title" :label="t('title')" />
+    <el-table-column prop="popularity" :label="t('popularity')" />
+    <el-table-column prop="release_date" :label="t('releaseDate')" />
   </el-table>
   <el-pagination
     @current-change="handleCurrentChange"
