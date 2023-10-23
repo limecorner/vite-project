@@ -50,6 +50,11 @@ const routes = [
     name: "import",
     component: () => import("@/views/Import.vue"),
   },
+  {
+    path: "/changeColor",
+    name: "changeColor",
+    component: () => import("@/views/ChangeColor.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
