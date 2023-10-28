@@ -59,6 +59,10 @@ const routerArray = [
     to: "user",
     heading: "user",
   },
+  {
+    to: "query",
+    heading: "query",
+  },
 ];
 </script>
 

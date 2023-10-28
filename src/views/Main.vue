@@ -12,5 +12,19 @@
         >/user/2</router-link
       >
     </li>
+    <li>
+      <router-link :to="{ name: 'query', query: { id: 1 } }"
+        >/query/1</router-link
+      >
+    </li>
+    <li>
+      <router-link
+        :to="{
+          name: 'query',
+          query: { id: 2, name: 'James', interest: 'read' },
+        }"
+        >/query/2</router-link
+      >
+    </li>
   </div>
 </template>

@@ -12,7 +12,7 @@ const routes = [
   },
   {
     path: "/slot",
-    name: "Slot",
+    name: "slot",
     component: () => import("@/views/Slot.vue"),
   },
   {
@@ -59,6 +59,11 @@ const routes = [
     path: "/user/:id",
     name: "user",
     component: () => import("@/views/User.vue"),
+  },
+  {
+    path: "/query",
+    name: "query",
+    component: () => import("@/views/Query.vue"),
   },
 ];
 const router = createRouter({
