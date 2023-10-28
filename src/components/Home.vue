@@ -1,3 +1,13 @@
 <template>
-  <div class="tab">Home component</div>
+  <div class="tab">
+    <p>Home component</p>
+
+    <span>Message is: {{ msg }}</span>
+    <input v-model="msg" />
+  </div>
 </template>
+
+<script setup>
+import { ref } from "vue";
+const msg = ref("");
+</script>

@@ -26,8 +26,10 @@ console.log(tabs);
     >
       {{ tab }}
     </button>
-    <component :is="tabs[currentTab]" class="tab"></component>
-    <component :is="Posts" class="tab"></component>
+    <KeepAlive>
+      <component :is="tabs[currentTab]" class="tab"></component>
+    </KeepAlive>
+    <!-- <component :is="Posts" class="tab"></component> -->
   </div>
 </template>
 
