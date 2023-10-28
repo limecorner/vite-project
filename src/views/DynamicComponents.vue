@@ -26,7 +26,8 @@ console.log(tabs);
     >
       {{ tab }}
     </button>
-    <KeepAlive>
+    <!--  只有 Home 元件會被緩存 -->
+    <KeepAlive include="Home">
       <component :is="tabs[currentTab]" class="tab"></component>
     </KeepAlive>
     <!-- <component :is="Posts" class="tab"></component> -->

@@ -6,6 +6,11 @@
     <input v-model="msg" />
   </div>
 </template>
+<!-- <script>
+export default {
+  name: "Home",
+};
+</script> -->
 
 <script setup>
 import { ref } from "vue";
