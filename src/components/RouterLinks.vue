@@ -55,6 +55,10 @@ const routerArray = [
     to: "changeColor",
     heading: "changeColor",
   },
+  {
+    to: "user",
+    heading: "user",
+  },
 ];
 </script>
 
