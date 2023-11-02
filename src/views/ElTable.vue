@@ -162,6 +162,7 @@ const exportDataToExcel = async () => {
 
   // 隱藏不展示的欄位
   const startIndex = Object.keys(headerDisplay).length;
+  console.log('header',header)
   const totalProperties = header.length;
   ws["!cols"] = [];
   for (let index = startIndex; index < totalProperties; index++) {

@@ -65,6 +65,11 @@ const routes = [
     name: "query",
     component: () => import("@/views/Query.vue"),
   },
+  {
+    path: "/resizeVue2",
+    name: "resizeVue2",
+    component: () => import("@/views/ResizeVue2.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

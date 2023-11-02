@@ -63,6 +63,10 @@ const routerArray = [
     to: "query",
     heading: "query",
   },
+  {
+    to: "resizeVue2",
+    heading: "resizeVue2",
+  },
 ];
 </script>
 
