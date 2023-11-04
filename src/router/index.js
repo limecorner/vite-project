@@ -70,6 +70,21 @@ const routes = [
     name: "resizeVue2",
     component: () => import("@/views/ResizeVue2.vue"),
   },
+  {
+    path: "/leetCode",
+    name: "leetCode",
+    component: () => import("@/views/LeetCode.vue"),
+  },
+  {
+    path: "/getter",
+    name: "getter",
+    component: () => import("@/views/Getter.vue"),
+  },
+  {
+    path: "/promise",
+    name: "promise",
+    component: () => import("@/views/Promise.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

@@ -67,6 +67,18 @@ const routerArray = [
     to: "resizeVue2",
     heading: "resizeVue2",
   },
+  {
+    to: "leetCode",
+    heading: "leetCode",
+  },
+  {
+    to: "getter",
+    heading: "getter",
+  },
+  {
+    to: "promise",
+    heading: "promise",
+  },
 ];
 </script>
 
