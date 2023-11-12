@@ -7,7 +7,7 @@
           isThreeTimes ? 'bgcGreen' : 'bgcGray',
         ]"
       >
-        {{ count }}
+        {{ count }} {{ countNoRef }}
       </p>
       <button @click="startCount">start</button>
     </div>
@@ -23,16 +23,20 @@
 import { ref, computed } from "vue";
 
 const count = ref(1);
+let countNoRef = 1;
 const isEven = computed(() => count.value % 2 === 0);
 const isThreeTimes = computed(() => count.value % 3 === 0);
 
 const startCount = () => {
-  count.value = 1;
-  for (let i = 1; i < 10; i++) {
-    setTimeout(() => {
-      count.value++;
-    }, 1000 * i);
-  }
+  count.value = 12;
+  countNoRef = 12;
+
+  // for (let i = 1; i < 10; i++) {
+  //   setTimeout(() => {
+  //     count.value++;
+  //     countNoRef++;
+  //   }, 1000 * i);
+  // }
 };
 
 // 原生 JS

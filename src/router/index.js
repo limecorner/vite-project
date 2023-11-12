@@ -71,9 +71,19 @@ const routes = [
     component: () => import("@/views/ResizeVue2.vue"),
   },
   {
+    path: "/resizeVue3",
+    name: "resizeVue3",
+    component: () => import("@/views/ResizeVue3.vue"),
+  },
+  {
     path: "/leetCode",
     name: "leetCode",
     component: () => import("@/views/LeetCode.vue"),
+  },
+  {
+    path: "/logic",
+    name: "logic",
+    component: () => import("@/views/Logic.vue"),
   },
   {
     path: "/getter",
